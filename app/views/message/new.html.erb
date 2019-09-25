@@ -1,0 +1,15 @@
+<%= link_to("<< Back to List", message_index_path, :class => 'back-link') %>
+
+<div class="message new">
+  <h2>Create message</h2>
+
+  <%= form_for(@message, url: '/message') do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Create message") %>
+    </div>
+
+  <% end %>
+</div>

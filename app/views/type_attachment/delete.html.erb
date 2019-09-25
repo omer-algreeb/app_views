@@ -1,0 +1,17 @@
+<%= link_to("<< Back to List", type_attachment_index_path, :class => 'back-link') %>
+
+<div class="type_attachment delete">
+  <h2>Delete type_attachment</h2>
+
+  <%= form_for(@type_attachment, :method => 'delete') do |f| %>
+
+    <p>Are you sure you want to permanently delete this type_attachment?</p>
+
+    <p class="reference-name"><%= f.object.name %></p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete type_attachment") %>
+    </div>
+
+  <% end %>
+</div>

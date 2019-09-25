@@ -1,0 +1,41 @@
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to("<< Back to List", user_index_path, :class => 'back-link') %>
+
+<div class="user show">
+  <h2>Show user</h2>
+
+  <table summary="user detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td><%= @user.email %></td>
+      </tr>
+    <tr>
+    <tr>
+        <th>Phone</th>
+        <td><%= @user.phone %></td>
+      </tr>
+    <tr>
+    <tr>
+        <th>Jop</th>
+        <td><%= @user.jop.name %></td>
+      </tr>
+    <tr>  
+      <th>Created</th>
+      <td><%= @user.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @user.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

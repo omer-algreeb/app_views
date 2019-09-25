@@ -1,0 +1,11 @@
+<table summary="attachment form fields">
+    <tr>
+      <th>att</th>
+      <td><%= f.file_field(:file) %></td>
+    </tr>
+    <tr>
+      <th>Message</th>
+      <td><%= f.select(:message_id, Message.all.map{|s| [s.title, s.id]}) %></td>
+      
+    </tr>
+  </table>

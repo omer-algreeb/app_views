@@ -1,0 +1,16 @@
+<table summary="User form fields">
+    <tr>
+      <th>Title</th>
+      <td><%= f.text_field(:title) %></td>
+    </tr>
+    <tr>
+      <th>descrption</th>
+      <td><%= f.text_field(:descrption) %></td>
+    </tr>
+    
+    <tr>
+      <th>Type_message</th>
+      <td><%= f.select(:type_message_id, TypeMessage.all.map{|s| [s.name, s.id]}) %></td>
+      
+    </tr>
+  </table>

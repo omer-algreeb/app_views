@@ -1,0 +1,33 @@
+<%= link_to("<< Back to List", access_menu_path, :class => 'back-link') %>
+
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<div class="type_message index">
+    <h2>type_message</h2>
+  
+    <%= link_to("Add New type_message", new_type_message_path, :class => 'action type_message') %>
+  
+    <table class="listing" summary="message list">
+      <tr class="header">
+        <th>#</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+      <% @type_message.each do |type_message| %>
+      <tr>
+        <td><%= type_message.id %></td>
+  
+        <td><%= type_message.name %></td>
+        <td class="actions">
+          <%= link_to("Show", type_message_path(type_message), :class => 'action show') %>
+          <%= link_to("Edit", edit_type_message_path(type_message), :class => 'action edit') %>
+          <%= link_to("Delete", delete_type_message_path(type_message), :class => 'action delete') %>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>

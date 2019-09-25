@@ -1,0 +1,17 @@
+<%= link_to("<< Back to List", jop_index_path, :class => 'back-link') %>
+
+<div class="jop delete">
+  <h2>Delete jop</h2>
+
+  <%= form_for(@jop, :method => 'delete') do |f| %>
+
+    <p>Are you sure you want to permanently delete this jop?</p>
+
+    <p class="reference-name"><%= f.object.name %></p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete jop") %>
+    </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,2 @@
+module TypeAttachmentHelper
+end

@@ -1,0 +1,27 @@
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to("<< Back to List", jop_index_path, :class => 'back-link') %>
+
+<div class="jop show">
+  <h2>Show jop</h2>
+
+  <table summary="jop detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @jop.name %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @jop.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @jop.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

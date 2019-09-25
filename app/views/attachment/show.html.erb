@@ -1,0 +1,21 @@
+<%= link_to("<< Back to List", attachment_index_path, :class => 'back-link') %>
+
+<div class="attachment show">
+  <h2>Show Attachment</h2>
+
+  <table summary="Subject detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @attachment.file_file_name %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @attachment.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @attachment.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

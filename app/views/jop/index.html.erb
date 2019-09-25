@@ -1,0 +1,33 @@
+<%= link_to("<< Back to List", access_menu_path, :class => 'back-link') %>
+
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<div class="jop index">
+    <h2>jop</h2>
+  
+    <%= link_to("Add New jop", new_jop_path, :class => 'action jop') %>
+  
+    <table class="listing" summary="attachment list">
+      <tr class="header">
+        <th>#</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+      <% @jop.each do |jop| %>
+      <tr>
+        <td><%= jop.id %></td>
+  
+        <td><%= jop.name %></td>
+        <td class="actions">
+          <%= link_to("Show", jop_path(jop), :class => 'action show') %>
+          <%= link_to("Edit", edit_jop_path(jop), :class => 'action edit') %>
+          <%= link_to("Delete", delete_jop_path(jop), :class => 'action delete') %>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>

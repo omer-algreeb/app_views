@@ -1,0 +1,17 @@
+<%= link_to("<< Back to List", type_message_index_path, :class => 'back-link') %>
+
+<div class="type_message delete">
+  <h2>Delete type_message</h2>
+
+  <%= form_for(@type_message, :method => 'delete') do |f| %>
+
+    <p>Are you sure you want to permanently delete this type_message?</p>
+
+    <p class="reference-name"><%= f.object.name %></p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete type_message") %>
+    </div>
+
+  <% end %>
+</div>

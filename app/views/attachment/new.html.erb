@@ -1,0 +1,16 @@
+<%= link_to("<< Back to List", "#", :class => 'back-link') %>
+
+<div class="attachment new">
+  <h2>Create attachment</h2>
+
+  <%= form_for(@attachment, url: '/attachment', multipart: true) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+
+    <div class="form-buttons">
+      <%= f.submit("Create attachment") %>
+    </div>
+
+  <% end %>
+</div>

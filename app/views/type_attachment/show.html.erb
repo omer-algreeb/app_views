@@ -1,0 +1,27 @@
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to("<< Back to List", type_attachment_index_path, :class => 'back-link') %>
+
+<div class="type_attachment show">
+  <h2>Show type_attachment</h2>
+
+  <table summary="type_attachment detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @type_attachment.name %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @type_attachment.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @type_attachment.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

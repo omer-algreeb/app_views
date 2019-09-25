@@ -1,0 +1,16 @@
+<%= link_to("<< Back to List", attachment_index_path, :class => 'back-link') %>
+
+<div class="attachment edit">
+  <h2>Update attachment</h2>
+
+  <%= form_for(@attachment) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+
+    <div class="form-buttons">
+      <%= f.submit("Update attachment") %>
+    </div>
+
+  <% end %>
+</div>

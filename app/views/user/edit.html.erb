@@ -1,0 +1,16 @@
+<%= link_to("<< Back to List", user_index_path, :class => 'back-link') %>
+
+<div class="user edit">
+  <h2>Update user</h2>
+
+  <%= form_for(@user) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+
+    <div class="form-buttons">
+      <%= f.submit("Update user") %>
+    </div>
+
+  <% end %>
+</div>

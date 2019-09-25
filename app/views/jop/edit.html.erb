@@ -1,0 +1,16 @@
+<%= link_to("<< Back to List", jop_index_path, :class => 'back-link') %>
+
+<div class="jop edit">
+  <h2>Update jop</h2>
+
+  <%= form_for(@jop) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+
+    <div class="form-buttons">
+      <%= f.submit("Update jop") %>
+    </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+<%= link_to("<< Back to List", message_index_path, :class => 'back-link') %>
+
+<div class="message edit">
+  <h2>Update message</h2>
+
+  <%= form_for(@message) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+
+    <div class="form-buttons">
+      <%= f.submit("Update message") %>
+    </div>
+
+  <% end %>
+</div>

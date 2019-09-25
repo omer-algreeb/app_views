@@ -1,0 +1,15 @@
+<%= link_to("<< Back to List", user_index_path, :class => 'back-link') %>
+
+<div class="user new">
+  <h2>Create user</h2>
+
+  <%= form_for(@user, url: '/user') do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Create user") %>
+    </div>
+
+  <% end %>
+</div>

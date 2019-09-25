@@ -1,0 +1,16 @@
+<% @page_title = "Admin Menu" %>
+
+<div class="menu">
+  <h2>Admin Menu</h2>
+  <div class="identity">Logged in as:</div>
+  <ul>
+    <li><%= link_to("Manage jop", jop_index_path) %></li>
+    <li><%= link_to("Manage type_message", type_message_index_path) %></li>
+    <li><%= link_to("Manage type_attachment", type_attachment_index_path) %></li>
+    <li><%= link_to("Manage Users", user_index_path) %></li>
+    <li><%= link_to("Manage message", message_index_path) %></li>
+    <li><%= link_to("Manage attachment", attachment_index_path) %></li>
+
+    <li><%= link_to("Logout", access_logout_path) %></li>
+  </ul>
+</div>

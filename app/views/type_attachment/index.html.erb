@@ -1,0 +1,33 @@
+<%= link_to("<< Back to List", access_menu_path, :class => 'back-link') %>
+
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<div class="type_attachment index">
+    <h2>type_attachment</h2>
+  
+    <%= link_to("Add New type_attachment", new_type_attachment_path, :class => 'action type_attachment') %>
+  
+    <table class="listing" summary="attachment list">
+      <tr class="header">
+        <th>#</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+      <% @type_attachment.each do |type_attachment| %>
+      <tr>
+        <td><%= type_attachment.id %></td>
+  
+        <td><%= type_attachment.name %></td>
+        <td class="actions">
+          <%= link_to("Show", type_attachment_path(type_attachment), :class => 'action show') %>
+          <%= link_to("Edit", edit_type_attachment_path(type_attachment), :class => 'action edit') %>
+          <%= link_to("Delete", delete_type_attachment_path(type_attachment), :class => 'action delete') %>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>

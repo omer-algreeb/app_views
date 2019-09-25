@@ -1,0 +1,36 @@
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to("<< Back to List", message_index_path, :class => 'back-link') %>
+
+<div class="message show">
+  <h2>Show message</h2>
+
+  <table summary="message detail view">
+    <tr>
+      <th>Title</th>
+      <td><%= @message.title %></td>
+    </tr>
+    <tr>
+        <th>descrption</th>
+        <td><%= @message.descrption %></td>
+      </tr>
+    <tr>
+    <tr>
+        <th>type_message</th>
+        <td><%= @message.type_message.name %></td>
+      </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @message.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @message.updated_at %></td>
+    </tr>
+  </table>
+
+</div>
