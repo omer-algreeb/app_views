@@ -13,4 +13,9 @@
       <td><%= f.select(:type_message_id, TypeMessage.all.map{|s| [s.name, s.id]}) %></td>
       
     </tr>
+    <tr>
+      <th>user</th>
+      <td><%= f.select(:user_ids, User.all.map{|s| [s.name, s.id]}) %></td>
+      
+    </tr>
   </table>

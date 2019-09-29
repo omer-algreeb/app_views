@@ -47,7 +47,7 @@ class JopController < ApplicationController
   def destroy
     @jop = Jop.find(params[:id])
     @jop.destroy
-    flash[:notice] = "jop '#{@jop.name}' destroyed successfully."
+    flash[:notice] = delete_sum_one('jop', @jop.name)
     redirect_to jop_index_path
   end
 

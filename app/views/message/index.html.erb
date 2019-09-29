@@ -25,7 +25,7 @@
   
         <td><%= message.title %></td>
         <td><%= message.descrption %></td>
-        <td><%= message.type_message.name %></td>
+        <td><%= message.type_message&.name %></td>
         <td class="actions">
           <%= link_to("Show", message_path(message), :class => 'action show') %>
           <%= link_to("Edit", edit_message_path(message), :class => 'action edit') %>

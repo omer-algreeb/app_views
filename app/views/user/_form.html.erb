@@ -24,4 +24,9 @@
       <td><%= f.select(:jop_id, Jop.all.map{|s| [s.name, s.id]}) %></td>
       
     </tr>
+    <tr>
+      <th>message</th>
+      <td><%= f.select(:message_ids, Message.all.map{|s| [s.title, s.id]}) %></td>
+      
+    </tr>
   </table>

@@ -16,15 +16,18 @@ class User < ApplicationRecord
   has_secure_password
   belongs_to :jop
 
-  has_many :user_messages
+  has_many :user_messages, dependent: :nullify
   has_many :messages, through: :user_messages
   
 
-  validates :name, acceptance: { message: 'must be abided' }
-  validates :email, presence: true
-  validates :phone, presence: true
+  validates :name, presence: true, format: { with: /\A[a-zA-Z]+\z/,
+    message: "only allows letters" }
+  validates :email, presence: true, uniqueness: true
+  validates :phone, presence: true, numericality: true
   validates :email, confirmation: true
   validates :email_confirmation, presence: true
+  validates :password, length: { in: 6..20 }
+
 
 
   scope :sorted, lambda { order(id: :desc) }

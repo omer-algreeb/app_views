@@ -9,4 +9,9 @@ class ApplicationController < ActionController::Base
     end
 
   end
+
+  def delete_sum_one(key_word = '', name = '')
+    "#{key_word} '#{name}' destroyed successfully."
+   end
+
 end

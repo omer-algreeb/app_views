@@ -9,7 +9,7 @@
 #
 
 class TypeAttachment < ApplicationRecord
-  has_many :attachments
+  has_many :attachments, dependent: :destroy
 
   scope :sorted, lambda { order(id: :desc) }
   scope :newest_first, lambda { order("created_at DESC") }
